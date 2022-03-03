@@ -1,0 +1,29 @@
+domain: my.domain
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: operator-go
+repo: github.com/jxl4650152/operator-go
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: certmanager.k8s.io
+  kind: Certificate
+  path: github.com/jxl4650152/operator-go/apis/certmanager.k8s.io/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: cert-manager.io
+  kind: Certificate
+  path: github.com/jxl4650152/operator-go/apis/cert-manager.io/v1
+  version: v1
+version: "3"
