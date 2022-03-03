@@ -31,8 +31,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	certmanagerk8siov1alpha1 "github.com/jxl4650152/operator-go/api/v1alpha1"
 	certmanageriov1 "github.com/jxl4650152/operator-go/apis/cert-manager.io/v1"
+	certmanagerk8siov1alpha1 "github.com/jxl4650152/operator-go/apis/certmanager.k8s.io/v1alpha1"
 	"github.com/jxl4650152/operator-go/controllers"
 	certmanageriocontrollers "github.com/jxl4650152/operator-go/controllers/cert-manager.io"
 	//+kubebuilder:scaffold:imports

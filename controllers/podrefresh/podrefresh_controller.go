@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 
-package controllers
+package podrefresh
 
 import (
 	"context"
@@ -32,7 +32,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 
-	certmanagerv1 "github.com/ibm/ibm-cert-manager-operator/pkg/apis/certmanager/v1"
+	certmanagerv1 "github.com/jxl4650152/operator-go/apis/cert-manager.io/v1"
 )
 
 var log = logf.Log.WithName("controller_podrefresh")
@@ -69,7 +69,7 @@ func add(mgr manager.Manager, r reconcile.Reconciler) error {
 	}
 
 	// Watch for changes to Certificates in the cluster
-	err = c.Watch(&source.Kind{Type: &certmanagerv1.Certificate{}}, &handler.EnqueueRequestForObject{})
+	err = c.Watch(&source.Kind{Type: &certmanagerv1.Certificate}, &handler.EnqueueRequestForObject{})
 	if err != nil {
 		return err
 	}

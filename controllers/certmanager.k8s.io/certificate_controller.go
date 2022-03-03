@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	certmanagerv1 "github.com/ibm/ibm-cert-manager-operator/pkg/apis/certmanager/v1"
+	certmanagerv1 "github.com/jxl4650152/operator-go/apis/cert-manager.io/v1"
 )
 
 // CertificateReconciler reconciles a Certificate object
